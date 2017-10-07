@@ -33,8 +33,10 @@ public class DogNav : MonoBehaviour {
 			idleTime = 0;
 			spriteAnimator.SetFloat ("x", move.x);
 			spriteAnimator.SetFloat ("y", move.y);
+			spriteAnimator.SetBool ("walk", true);
 		} else {
 			idleTime += Time.deltaTime;
+			spriteAnimator.SetBool ("walk", false);
 			if (idleTime >= idleReset) {
 				spriteAnimator.SetFloat ("x", 0);
 				spriteAnimator.SetFloat ("y", 0);
