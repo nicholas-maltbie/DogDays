@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: ff3a8a822ef1a8e40b64f2081110b0e2
-timeCreated: 1507382010
-=======
-guid: 19c498a6216822246b55148e25d32dd2
-timeCreated: 1507386748
->>>>>>> UI-stuff
+guid: cfb69ac56de7dff4188179bdcb05b2d1
+timeCreated: 1507386731
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -17,11 +12,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
-<<<<<<< HEAD
-=======
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
->>>>>>> UI-stuff
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -37,12 +29,6 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-<<<<<<< HEAD
-    filterMode: -1
-    aniso: -1
-    mipBias: -1
-    wrapMode: 1
-=======
     serializedVersion: 2
     filterMode: -1
     aniso: -1
@@ -50,7 +36,6 @@ TextureImporter:
     wrapU: 1
     wrapV: 1
     wrapW: 1
->>>>>>> UI-stuff
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -60,11 +45,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-  spritePixelsToUnits: 25
-=======
   spritePixelsToUnits: 100
->>>>>>> UI-stuff
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -82,25 +63,11 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-<<<<<<< HEAD
-  - buildTarget: Standalone
-    maxTextureSize: 2048
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-=======
->>>>>>> UI-stuff
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
-<<<<<<< HEAD
-=======
     physicsShape: []
->>>>>>> UI-stuff
   spritePackingTag: 
   userData: 
   assetBundleName: 
