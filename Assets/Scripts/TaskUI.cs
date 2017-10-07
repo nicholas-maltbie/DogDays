@@ -4,22 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TaskUI : MonoBehaviour {
-	public struct Task {
-		public string title;
-		public string secondary;
-
-		public Task(string title, string secondary) {
-			this.title = title;
-			this.secondary = secondary;
-		}
-	}
-
 	public Text tasks;
 
-	public List<Task> taskList = new List<Task>();
+	public List<string> taskList = new List<string>();
 
-	public void AddTask(string title, string secondary) {
-		this.taskList.Add(new Task(title, secondary));
+	public void AddTasks(List<string> tasks) {
+		// foreach (string task in tasks) {
+		// 	this.taskList.Add(task);
+		// }
+		this.taskList = tasks;
 	}
 
 	// Use this for initialization
@@ -31,7 +24,7 @@ public class TaskUI : MonoBehaviour {
 	void Update () {
 		tasks.text = "Tasks\n";
 		for (int i = 0; i < this.taskList.Count; i++) {
-			tasks.text += "- " + this.taskList[i].title + "\n";
+			tasks.text += "- " + this.taskList[i] + "\n";
 		}
 	}
 }
