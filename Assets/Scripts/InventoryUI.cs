@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour {
 
 	public SpriteRenderer[] renderList = new SpriteRenderer[4];
-	public SpriteRenderer slot = new SpriteRenderer();
+	public SpriteRenderer[] slotList = new SpriteRenderer[4];
 	public Sprite[] spriteList = new Sprite[4];
+
+	public Sprite slotSprite = new Sprite();
+
+	public int selectedIndex = 0;
 
 	public bool AddSprite(Sprite sprite) {
 		for (int i = 0; i < 4; i++) {
@@ -35,13 +39,13 @@ public class InventoryUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < 4; i++) {
-			// float height = spriteList[i].bounds.size.X;
+			// scale and place items in inventory
 			renderList[i].sprite = spriteList[i];
 			float height = renderList[i].sprite.bounds.size.y;
 			float width = renderList[i].sprite.bounds.size.x;
 
-			float slotHeight = slot.sprite.bounds.size.y;
-			float slotWidth = slot.sprite.bounds.size.x;
+			float slotHeight = slotList[0].sprite.bounds.size.y;
+			float slotWidth = slotList[0].sprite.bounds.size.x;
 
 			float scaleWidth = slotWidth / width * 0.8f;
 			float scaleHeight = slotHeight / height * 0.8f;
@@ -52,5 +56,7 @@ public class InventoryUI : MonoBehaviour {
 				renderList[i].transform.localScale = new Vector2(scaleWidth, scaleWidth);
 			}
 		}
+
+		slotList[selectedIndex].sprite = slotSprite;
 	}
 }
