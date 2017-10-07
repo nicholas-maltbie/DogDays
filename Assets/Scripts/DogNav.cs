@@ -23,6 +23,6 @@ public class DogNav : MonoBehaviour {
 
 		Vector3 move = new Vector3 (horiz, vert).normalized;
 
-		transform.Translate (move * Time.deltaTime * moveSpeed);
+		GetComponent<Rigidbody2D>().velocity = move * moveSpeed;
 	}
 }
