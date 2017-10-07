@@ -8,7 +8,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour {
 
 	public Sprite normalSprite, selectedSprite;
-	public bool selected;
+	public bool selected, canSelect = true;
 	public SpriteRenderer ren;
 
 	// Use this for initialization

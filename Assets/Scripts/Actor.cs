@@ -24,10 +24,10 @@ public class Actor : MonoBehaviour {
 		GameObject next = null;
 		if (i < poss.Length) {
 			RaycastHit2D hit = poss [i];
-			if (hit != null && hit.collider != null) {
-				if (hit.collider.gameObject.GetComponent<Interactable> () != null) {
-					next = hit.collider.gameObject;
-				}
+			if (hit != null && 
+				hit.collider.gameObject.GetComponent<Interactable> () != null && 
+				hit.collider.gameObject.GetComponent<Interactable> ().canSelect) {
+				next = hit.collider.gameObject;
 			}
 		}
 		if (selected == null && next != null) {
@@ -43,6 +43,12 @@ public class Actor : MonoBehaviour {
 				selected.GetComponent<Interactable> ().selected = false;
 				next.GetComponent<Interactable> ().selected = true;
 				selected = next;
+			}
+		}
+
+		if (selected != null) {
+			if (Input.GetButton ("Interact")) {
+				selected.GetComponent<Interactable> ().Interact (gameObject);
 			}
 		}
 
