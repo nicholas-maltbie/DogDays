@@ -52,5 +52,16 @@ public class Inventory : MonoBehaviour {
 		if (Input.GetButtonDown ("Drop")) {
 			DropItem (selected);
 		}
+
+		if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
+			selected += 1;
+		} else if (Input.GetAxis ("Mouse ScrollWheel") < 0) {
+			selected -= 1;
+		}
+		if (selected < 0) {
+			selected = 3;
+		} else if (selected > 3) {
+			selected = 0;
+		}
 	}
 }
