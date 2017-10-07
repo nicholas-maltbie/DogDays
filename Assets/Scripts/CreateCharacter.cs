@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreateCharacter : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class CreateCharacter : MonoBehaviour {
 		if (GameObject.FindGameObjectsWithTag ("Player").Length == 0) {
 			Instantiate (dogPrefab);
 			dogPrefab.transform.position = spawn.position;
+			//Scenes.AddScene ("Apartment", SceneManager.GetActiveScene ());
 		}
 	}
 	
