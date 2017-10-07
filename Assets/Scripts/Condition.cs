@@ -6,6 +6,7 @@ public class Condition : MonoBehaviour {
 
 	public Condition[] preConditions;
 	public bool satisfied = true;
+	public string taskDescription;
 
 	public bool IsSatisfied() {
 		foreach (Condition preCondition in preConditions) {
