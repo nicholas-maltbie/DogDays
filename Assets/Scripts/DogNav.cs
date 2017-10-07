@@ -7,6 +7,7 @@ public class DogNav : MonoBehaviour {
 	public float moveSpeed = 1.0f;
 	public Animator spriteAnimator;
 	public Rigidbody2D rb2d;
+	public Vector3 look = Vector3.up;
 
 	private float idleTime = 0.0f, idleReset = 10.0f;
 
@@ -33,6 +34,7 @@ public class DogNav : MonoBehaviour {
 			idleTime = 0;
 			spriteAnimator.SetFloat ("x", move.x);
 			spriteAnimator.SetFloat ("y", move.y);
+			look = new Vector3 (move.x, move.y);
 			spriteAnimator.SetBool ("walk", true);
 		} else {
 			idleTime += Time.deltaTime;
@@ -40,6 +42,7 @@ public class DogNav : MonoBehaviour {
 			if (idleTime >= idleReset) {
 				spriteAnimator.SetFloat ("x", 0);
 				spriteAnimator.SetFloat ("y", 0);
+				look = new Vector3 (0, 0);
 			}
 		}
 	}
