@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour {
 
 	public SpriteRenderer[] renderList = new SpriteRenderer[4];
-	public GameObject[] objList = new GameObject[4];
+	public SpriteRenderer slot = new SpriteRenderer();
 	public Sprite[] spriteList = new Sprite[4];
 
 	public bool AddSprite(Sprite sprite) {
@@ -35,8 +35,22 @@ public class InventoryUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < 4; i++) {
-			objList[i].transform.localScale = new Vector3(2.0f, 2.0f);
+			// float height = spriteList[i].bounds.size.X;
 			renderList[i].sprite = spriteList[i];
+			float height = renderList[i].sprite.bounds.size.y;
+			float width = renderList[i].sprite.bounds.size.x;
+
+			float slotHeight = slot.sprite.bounds.size.y;
+			float slotWidth = slot.sprite.bounds.size.x;
+
+			float scaleWidth = slotWidth / width * 0.8f;
+			float scaleHeight = slotHeight / height * 0.8f;
+
+			if (scaleWidth > scaleHeight) {
+				renderList[i].transform.localScale = new Vector2(scaleHeight, scaleHeight);
+			} else {
+				renderList[i].transform.localScale = new Vector2(scaleWidth, scaleWidth);
+			}
 		}
 	}
 }
