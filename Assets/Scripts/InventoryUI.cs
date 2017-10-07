@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour {
 	public Sprite[] spriteList = new Sprite[4];
 
 	public Sprite slotSprite = new Sprite();
+	public Sprite bgSprite;
 
 	public int selectedIndex = 0;
 
@@ -40,23 +41,30 @@ public class InventoryUI : MonoBehaviour {
 	void Update () {
 		for (int i = 0; i < 4; i++) {
 			// scale and place items in inventory
-			renderList[i].sprite = spriteList[i];
-			float height = renderList[i].sprite.bounds.size.y;
-			float width = renderList[i].sprite.bounds.size.x;
+			if (spriteList [i] != null) {
+				renderList [i].sprite = spriteList [i];
+				float height = renderList [i].sprite.bounds.size.y;
+				float width = renderList [i].sprite.bounds.size.x;
 
-			float slotHeight = slotList[0].sprite.bounds.size.y;
-			float slotWidth = slotList[0].sprite.bounds.size.x;
+				float slotHeight = slotList [0].sprite.bounds.size.y;
+				float slotWidth = slotList [0].sprite.bounds.size.x;
 
-			float scaleWidth = slotWidth / width * 0.8f;
-			float scaleHeight = slotHeight / height * 0.8f;
+				float scaleWidth = slotWidth / width * 0.8f;
+				float scaleHeight = slotHeight / height * 0.8f;
 
-			if (scaleWidth > scaleHeight) {
-				renderList[i].transform.localScale = new Vector2(scaleHeight, scaleHeight);
+				if (scaleWidth > scaleHeight) {
+					renderList [i].transform.localScale = new Vector2 (scaleHeight, scaleHeight);
+				} else {
+					renderList [i].transform.localScale = new Vector2 (scaleWidth, scaleWidth);
+				}
 			} else {
-				renderList[i].transform.localScale = new Vector2(scaleWidth, scaleWidth);
+				renderList [i].sprite = null;
+			}
+			if (i == selectedIndex) {
+				slotList [i].sprite = slotSprite;
+			} else {
+				slotList [i].sprite = bgSprite;
 			}
 		}
-
-		slotList[selectedIndex].sprite = slotSprite;
 	}
 }

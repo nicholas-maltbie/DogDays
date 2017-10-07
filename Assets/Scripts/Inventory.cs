@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour {
 	public Item[] items = new Item[4];
 	public int selected = 0;
 	private GameObject held;
+	public InventoryUI userInterface;
 
 	// Use this for initialization
 	void Start () {
@@ -72,5 +73,14 @@ public class Inventory : MonoBehaviour {
 		} else if (selected > 3) {
 			selected = 0;
 		}
+
+		for (int i = 0; i < 4; i++) {
+			if (items [i] != null) {
+				userInterface.spriteList [i] = items [i].icon;
+			} else {
+				userInterface.spriteList [i] = null;
+			}
+		}
+		userInterface.selectedIndex = selected;
 	}
 }
