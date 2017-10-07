@@ -5,6 +5,10 @@ using UnityEngine;
 public class DogNav : MonoBehaviour {
 
 	public float moveSpeed = 1.0f;
+	public Animator spriteAnimator;
+	public Rigidbody2D rb2d;
+
+	private float idleTime = 0.0f, idleReset = 10.0f;
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
@@ -23,6 +27,18 @@ public class DogNav : MonoBehaviour {
 
 		Vector3 move = new Vector3 (horiz, vert).normalized;
 
-		GetComponent<Rigidbody2D>().velocity = move * moveSpeed;
+		rb2d.velocity = move * moveSpeed;
+
+		if (move != Vector3.zero) {
+			idleTime = 0;
+			spriteAnimator.SetFloat ("x", move.x);
+			spriteAnimator.SetFloat ("y", move.y);
+		} else {
+			idleTime += Time.deltaTime;
+			if (idleTime >= idleReset) {
+				spriteAnimator.SetFloat ("x", 0);
+				spriteAnimator.SetFloat ("y", 0);
+			}
+		}
 	}
 }
