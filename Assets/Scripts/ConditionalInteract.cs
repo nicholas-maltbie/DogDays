@@ -8,7 +8,7 @@ public class ConditionalInteract : MonoBehaviour {
 	public Interactable interactable;
 
 	void Update() {
-		interactable.canSelect = condition.IsSatisfied;
+		interactable.canSelect = condition.IsSatisfied();
 	}
 
 

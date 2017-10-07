@@ -34,6 +34,15 @@ public class Inventory : MonoBehaviour {
 		return false;
 	}
 
+	public bool HasItemWithName(string itemName) {
+		foreach (Item item in items) {
+			if (item != null && item.itemName == itemName) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public bool AddItem(Item item) {
 		if (HasOpen ()) {
 			for (int i = 0; i < items.Length; i++) {
