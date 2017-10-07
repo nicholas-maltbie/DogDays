@@ -44,6 +44,16 @@ public class Inventory : MonoBehaviour {
 		return false;
 	}
 
+	public bool RemoveItemWithName(string itemName) {
+		for (int i = 0; i < 4; i++) {
+			if (items [i] != null && items [i].itemName == itemName) {
+				DropItem (i);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public bool AddItem(Item item) {
 		if (HasOpen ()) {
 			for (int i = 0; i < items.Length; i++) {
@@ -63,15 +73,24 @@ public class Inventory : MonoBehaviour {
 			DropItem (selected);
 		}
 
-		if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
+		if (Input.GetAxis ("Mouse ScrollWheel") < 0) {
 			selected += 1;
-		} else if (Input.GetAxis ("Mouse ScrollWheel") < 0) {
+		} else if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
 			selected -= 1;
 		}
 		if (selected < 0) {
 			selected = 3;
 		} else if (selected > 3) {
 			selected = 0;
+		}
+		if (Input.GetKeyDown ("1")) {
+			selected = 0;
+		} else if (Input.GetKeyDown ("2")) {
+			selected = 1;
+		} else if (Input.GetKeyDown ("3")) {
+			selected = 2;
+		} else if (Input.GetKeyDown ("4")) {
+			selected = 3;
 		}
 
 		for (int i = 0; i < 4; i++) {
