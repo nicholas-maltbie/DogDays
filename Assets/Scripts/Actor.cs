@@ -48,7 +48,7 @@ public class Actor : MonoBehaviour {
 
 		if (selected != null) {
 			if (Input.GetButtonDown ("Interact")) {
-				selected.GetComponent<Interactable> ().Interact (gameObject);
+				selected.SendMessage("Interact", gameObject);
 			}
 		}
 

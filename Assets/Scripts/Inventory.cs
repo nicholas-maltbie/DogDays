@@ -44,14 +44,15 @@ public class Inventory : MonoBehaviour {
 		return false;
 	}
 
-	public bool RemoveItemWithName(string itemName) {
+	public GameObject RemoveItemWithName(string itemName) {
 		for (int i = 0; i < 4; i++) {
 			if (items [i] != null && items [i].itemName == itemName) {
+				GameObject tmp = items [i].gameObject;
 				DropItem (i);
-				return true;
+				return tmp;
 			}
 		}
-		return false;
+		return null;
 	}
 
 	public bool AddItem(Item item) {
