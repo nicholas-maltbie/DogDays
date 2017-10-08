@@ -46,6 +46,9 @@ public class Menu : MonoBehaviour {
 	
 	public void MainMenu () {
 		string target = "Title";
-		SceneManager.LoadScene(target, LoadSceneMode.Single);
+		if (GameObject.FindGameObjectWithTag ("Player") != null) {
+			Destroy (GameObject.FindGameObjectWithTag ("Player"));
+		}
+		SceneManager.LoadSceneAsync(target, LoadSceneMode.Single);
 	}
 }
