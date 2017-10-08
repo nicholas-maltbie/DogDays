@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 124d6758f5344144e949d281cc40e617
-timeCreated: 1507431558
+guid: 1d3fea00d5b06a645a72acfb7d1f0119
+timeCreated: 1507437776
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dog_idle_Y_0
-    21300002: dog_idle_Y_1
-    21300004: dog_idle_Y_2
-    21300006: dog_idle_Y_3
-    21300008: dog_idle_Y_4
+    21300000: dog_idle_Y_sel_0
+    21300002: dog_idle_Y_sel_1
+    21300004: dog_idle_Y_sel_2
+    21300006: dog_idle_Y_sel_3
+    21300008: dog_idle_Y_sel_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -75,7 +75,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dog_idle_Y_0
+      name: dog_idle_Y_sel_0
       rect:
         serializedVersion: 2
         x: 0
@@ -88,7 +88,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dog_idle_Y_1
+      name: dog_idle_Y_sel_1
       rect:
         serializedVersion: 2
         x: 32
@@ -101,7 +101,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dog_idle_Y_2
+      name: dog_idle_Y_sel_2
       rect:
         serializedVersion: 2
         x: 0
@@ -114,7 +114,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dog_idle_Y_3
+      name: dog_idle_Y_sel_3
       rect:
         serializedVersion: 2
         x: 32
@@ -127,7 +127,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dog_idle_Y_4
+      name: dog_idle_Y_sel_4
       rect:
         serializedVersion: 2
         x: 0
