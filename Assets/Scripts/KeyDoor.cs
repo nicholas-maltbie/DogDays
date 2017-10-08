@@ -9,7 +9,7 @@ public class KeyDoor : Door {
 	public override void Interact(GameObject actor) {
 		if (actor.GetComponent<Inventory> ().HasItemWithName (key)) {
 			base.Interact (actor);
-			actor.GetComponent<Inventory> ().RemoveItemWithName (key);
+			Destroy (actor.GetComponent<Inventory> ().RemoveItemWithName (key));
 		}
 	}
 }

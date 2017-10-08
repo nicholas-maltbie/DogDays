@@ -11,7 +11,7 @@ public class Door : Interactable {
 	public override void Interact(GameObject actor) {
 		Scene sceneToLoad = SceneManager.GetSceneByName(target);
 		DontDestroyOnLoad(actor);
-		SceneManager.LoadSceneAsync(target, LoadSceneMode.Single);
+		SceneManager.LoadScene(target, LoadSceneMode.Single);
 		actor.transform.position = targetPos;
 	}
 }
