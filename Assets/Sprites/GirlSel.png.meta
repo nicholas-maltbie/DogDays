@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: b890aa3fe89559e41a873c96727de0e2
-timeCreated: 1507426956
+guid: 21cac38c6c23b2a41b0485e903a7bca6
+timeCreated: 1507432744
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Girl_0
-    21300002: Girl_1
+    21300000: GirlSel_0
+    21300002: GirlSel_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -37,7 +37,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -72,7 +72,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Girl_0
+      name: GirlSel_0
       rect:
         serializedVersion: 2
         x: 0
@@ -85,7 +85,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Girl_1
+      name: GirlSel_1
       rect:
         serializedVersion: 2
         x: 0
