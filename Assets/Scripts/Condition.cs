@@ -8,7 +8,7 @@ public class Condition : MonoBehaviour {
 	public bool satisfied = true;
 	public string taskDescription;
 
-	public bool IsSatisfied() {
+	virtual public bool IsSatisfied() {
 		foreach (Condition preCondition in preConditions) {
 			if (!preCondition.IsSatisfied ()) {
 				return false;
