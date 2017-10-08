@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6c6c7f1e76d1494bad3332458eb0470
-timeCreated: 1507418489
+timeCreated: 1507439156
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,14 @@ TextureImporter:
     21300006: Bones Menu_3
     21300008: Bones Menu_4
     21300010: Bones Menu_5
+    21300012: Bones Menu_6
+    21300014: Bones Menu_7
+    21300016: Bones Menu_8
+    21300018: Bones Menu_9
+    21300020: Bones Menu_10
+    21300022: Bones Menu_11
+    21300024: Bones Menu_12
+    21300026: Bones Menu_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -85,7 +93,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -99,7 +107,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -112,8 +120,8 @@ TextureImporter:
       name: Bones Menu_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 128
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -126,8 +134,8 @@ TextureImporter:
       name: Bones Menu_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 192
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -141,7 +149,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -152,6 +160,118 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: Bones Menu_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bones Menu_13
       rect:
         serializedVersion: 2
         x: 64
